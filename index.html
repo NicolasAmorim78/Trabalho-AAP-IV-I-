@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interface web para cadastro e visualização de dados de um sistema de gestão">
+    <title>Sistema de Gestão</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+```
+<header class="cabecalho">
+    <div class="container">
+        <h1>Sistema de Gestão</h1>
+        <p>Cadastro e gerenciamento de registros</p>
+    </div>
+</header>
+
+<nav class="navegacao" aria-label="Navegação principal">
+    <div class="container">
+        <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#cadastro">Cadastro</a></li>
+            <li><a href="#registros">Registros</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main id="inicio" class="container">
+
+    <section class="introducao" aria-labelledby="titulo-introducao">
+        <h2 id="titulo-introducao">Gestão de dados</h2>
+        <p>
+            Utilize o formulário abaixo para cadastrar novos registros
+            e acompanhe os dados cadastrados na tabela de registros.
+        </p>
+    </section>
+
+    <section id="cadastro" class="card" aria-labelledby="titulo-cadastro">
+        <h2 id="titulo-cadastro">Cadastrar registro</h2>
+
+        <form action="#" method="post">
+
+            <fieldset>
+                <legend>Dados pessoais</legend>
+
+                <div class="campo">
+                    <label for="nome">Nome completo</label>
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        placeholder="Digite o nome completo"
+                        required
+                        autocomplete="name"
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="exemplo@email.com"
+                        required
+                        autocomplete="email"
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="telefone">Telefone</label>
+                    <input
+                        type="tel"
+                        id="telefone"
+                        name="telefone"
+                        placeholder="(00) 00000-0000"
+                        autocomplete="tel"
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="data">Data de cadastro</label>
+                    <input
+                        type="date"
+                        id="data"
+                        name="data"
+                        required
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="categoria">Categoria</label>
+                    <select id="categoria" name="categoria" required>
+                        <option value="">Selecione uma categoria</option>
+                        <option value="cliente">Cliente</option>
+                        <option value="funcionario">Funcionário</option>
+                        <option value="fornecedor">Fornecedor</option>
+                    </select>
+                </div>
+
+                <div class="campo campo-completo">
+                    <label for="observacoes">Observações</label>
+                    <textarea
+                        id="observacoes"
+                        name="observacoes"
+                        rows="4"
+                        placeholder="Digite informações adicionais"
+                    ></textarea>
+                </div>
+            </fieldset>
+
+            <div class="acoes">
+                <button type="reset" class="botao secundario">
+                    Limpar
+                </button>
+
+                <button type="submit" class="botao">
+                    Cadastrar
+                </button>
+            </div>
+
+        </form>
+    </section>
+
+    <section id="registros" class="card" aria-labelledby="titulo-registros">
+        <h2 id="titulo-registros">Registros cadastrados</h2>
+
+        <div class="tabela-container">
+            <table>
+                <caption>
+                    Lista de registros cadastrados no sistema
+                </caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Nome</th>
+                        <th scope="col">E-mail</th>
+                        <th scope="col">Telefone</th>
+                        <th scope="col">Categoria</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Maria Silva</td>
+                        <td>maria@email.com</td>
+                        <td>(11) 99999-1111</td>
+                        <td>Cliente</td>
+                        <td>
+                            <span class="status ativo">Ativo</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>João Santos</td>
+                        <td>joao@email.com</td>
+                        <td>(21) 98888-2222</td>
+                        <td>Fornecedor</td>
+                        <td>
+                            <span class="status ativo">Ativo</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Ana Oliveira</td>
+                        <td>ana@email.com</td>
+                        <td>(31) 97777-3333</td>
+                        <td>Funcionário</td>
+                        <td>
+                            <span class="status pendente">Pendente</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+</main>
+
+<footer class="rodape">
+    <div class="container">
+        <p>&copy; 2026 Sistema de Gestão. Projeto acadêmico.</p>
+    </div>
+</footer>
+```
+
+</body>
+</html>
